@@ -43,6 +43,75 @@ A real-time sign language recognition system using deep learning and computer vi
   - Data augmentation
   - Normalization and standardization
 
+### Model Architecture
+The system uses a custom CNN architecture optimized for real-time sign language recognition:
+
+#### Input Layer
+- Input shape: (32, 32, 3) - RGB images
+- Normalized pixel values (0-1)
+
+#### Convolutional Blocks
+1. **First Block**:
+   - Conv2D: 16 filters, (2x2) kernel
+   - BatchNormalization
+   - ReLU activation
+   - MaxPooling2D: (2x2) pool size
+
+2. **Second Block**:
+   - Conv2D: 32 filters, (3x3) kernel
+   - BatchNormalization
+   - ReLU activation
+   - MaxPooling2D: (3x3) pool size
+
+3. **Third Block**:
+   - Conv2D: 64 filters, (5x5) kernel
+   - BatchNormalization
+   - ReLU activation
+   - MaxPooling2D: (5x5) pool size
+
+#### Dense Layers
+- Flatten layer
+- Dense layer: 128 units with ReLU
+- Dropout: 0.2
+- Output layer: 29 units with softmax (one for each sign)
+
+### Training Process
+The model was trained using a comprehensive approach to ensure robust performance:
+
+#### Data Preparation
+- **Image Size**: 32x32 pixels
+- **Data Augmentation**:
+  - Rotation: ±20 degrees
+  - Width/Height shift: ±0.2
+  - Shear: ±0.2
+  - Zoom: ±0.2
+  - Horizontal flip
+  - Fill mode: 'nearest'
+
+#### Training Configuration
+- **Optimizer**: Adam
+  - Learning rate: 0.001
+  - Beta1: 0.9
+  - Beta2: 0.999
+- **Loss Function**: Categorical Crossentropy
+- **Batch Size**: 64
+- **Epochs**: 50 (with early stopping)
+
+#### Training Strategies
+- **Early Stopping**:
+  - Monitor: validation loss
+  - Patience: 5 epochs
+  - Restore best weights
+- **Learning Rate Reduction**:
+  - Monitor: validation loss
+  - Factor: 0.2
+  - Patience: 3 epochs
+  - Min learning rate: 1e-6
+- **Model Checkpointing**:
+  - Save best model based on validation accuracy
+  - Monitor: validation accuracy
+  - Mode: max
+
 ### Model Performance
 The model achieves excellent performance on both training and validation sets:
 
