@@ -39,3 +39,4 @@ data/train/*
 data/test/*
 !data/train/.gitkeep
 !data/test/.gitkeep 
+.env
