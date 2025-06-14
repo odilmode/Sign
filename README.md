@@ -1,22 +1,53 @@
 # Sign Language Recognition System
 
-A real-time sign language recognition system using deep learning and computer vision.
+A real-time sign language recognition system using deep learning and computer vision. This project enables real-time translation of American Sign Language (ASL) gestures into text, making communication more accessible for the deaf and hard-of-hearing community.
 
-## Features
+## Project Overview
 
-- Real-time sign language recognition using webcam
-- Support for 29 different signs (26 letters, space, nothing, and delete)
-- Word and sentence building capabilities
-- Learning mode with visual guides
-- Practice mode for improving accuracy
-- Text-to-speech output (on supported platforms)
-- Session history tracking
+### Core Features
+- **Real-time Recognition**: Captures and processes video feed to recognize ASL gestures instantly
+- **Comprehensive Sign Support**: Recognizes 29 different signs:
+  - 26 letters (A-Z)
+  - Space gesture
+  - "Nothing" gesture (when no sign is shown)
+  - Delete gesture (to remove mistakes)
+- **Word & Sentence Building**: 
+  - Constructs words from individual letters
+  - Builds complete sentences with proper spacing
+  - Supports word deletion and correction
+- **Learning Mode**:
+  - Visual guides for each sign
+  - Interactive letter selection menu
+  - Real-time feedback on hand positioning
+- **Practice Mode**:
+  - Focused practice on specific letters
+  - Progress tracking
+  - Performance statistics
+- **User Experience**:
+  - Text-to-speech output (on supported platforms)
+  - Session history tracking
+  - Clear visual feedback
+  - Intuitive controls
 
-## Demo
+### Technical Implementation
+- **Computer Vision**:
+  - Hand detection and tracking
+  - Region of Interest (ROI) processing
+  - Real-time frame processing
+- **Deep Learning**:
+  - Convolutional Neural Network (CNN) architecture
+  - Optimized for real-time performance
+  - High accuracy in gesture recognition
+- **Data Processing**:
+  - Image preprocessing
+  - Data augmentation
+  - Normalization and standardization
+
+### Demo
 
 ![Demo GIF](img/demo.gif)
 
-## Screenshots
+### Screenshots
 
 ![Main Interface](img/main_interface.png)
 ![Learning Mode](img/learning_interface.png)
