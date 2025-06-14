@@ -38,4 +38,26 @@ training_history.json
 data/train/*
 data/test/*
 !data/train/.gitkeep
-!data/test/.gitkeep 
+!data/test/.gitkeep
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore backend and web-related files
+backend/
+node_modules/
+dist/
+build/
+static/
+templates/
+
+# Ignore virtual environments
+venv/
+.env/
+
+# Ignore other common files
+*.log 
