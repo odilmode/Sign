@@ -16,28 +16,24 @@ def create_model(num_classes=29):  # 26 letters + space + nothing + del
     """
     model = Sequential([
         # First Convolutional Block
-        Conv2D(32, (3, 3), padding='same', activation='relu', input_shape=(64, 64, 1)),
+        Conv2D(32, (3, 3), padding='same', activation='relu', input_shape=(32, 32, 3)),
         BatchNormalization(),
-        Conv2D(32, (3, 3), padding='same', activation='relu'),
-        BatchNormalization(),
-        MaxPooling2D(2, 2),
-        Dropout(0.25),
+        MaxPooling2D((2, 2)),
         
         # Second Convolutional Block
         Conv2D(64, (3, 3), padding='same', activation='relu'),
         BatchNormalization(),
-        Conv2D(64, (3, 3), padding='same', activation='relu'),
-        BatchNormalization(),
-        MaxPooling2D(2, 2),
-        Dropout(0.25),
+        MaxPooling2D((2, 2)),
         
         # Third Convolutional Block
         Conv2D(128, (3, 3), padding='same', activation='relu'),
         BatchNormalization(),
-        Conv2D(128, (3, 3), padding='same', activation='relu'),
+        MaxPooling2D((2, 2)),
+        
+        # Fourth Convolutional Block
+        Conv2D(256, (3, 3), padding='same', activation='relu'),
         BatchNormalization(),
-        MaxPooling2D(2, 2),
-        Dropout(0.25),
+        MaxPooling2D((2, 2)),
         
         # Flatten and Dense Layers
         Flatten(),

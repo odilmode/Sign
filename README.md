@@ -133,10 +133,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Dataset: American Sign Language (ASL) dataset
-- OpenCV for computer vision capabilities
-- TensorFlow for deep learning framework 
+This project is licensed under the MIT License - see the LICENSE file for details. 
