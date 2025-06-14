@@ -43,6 +43,23 @@ A real-time sign language recognition system using deep learning and computer vi
   - Data augmentation
   - Normalization and standardization
 
+### Model Performance
+The model achieves excellent performance on both training and validation sets:
+
+#### Training Metrics
+- **Training Accuracy**: 92.19%
+- **Validation Accuracy**: 100%
+- **Training Loss**: 0.2452
+- **Validation Loss**: 0.0283
+
+#### Training Visualization
+![Training Metrics](training_metrics.png)
+
+The plots above show:
+- **Training vs Validation Accuracy**: Demonstrates how well the model learns and generalizes
+- **Training vs Validation Loss**: Shows the model's convergence and stability
+- The model achieves very high accuracy on both training and validation sets, with perfect validation accuracy and very low validation loss
+
 ### Demo
 
 ![Demo GIF](img/demo.gif)
